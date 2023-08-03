@@ -31,13 +31,12 @@ const filterPokemonArrayByName = (searchTerm: string) => {
     pokemon.name.includes(searchTerm)
   );
   console.log(filteredPokemon);
-
   changeHTMLByName(filteredPokemon);
 };
 
-const changeHTMLByName = (ilteredPokemon: Pokemon[]) => {
+const changeHTMLByName = (filteredPokemon: Pokemon[]) => {
   container.innerHTML = ``;
-  ilteredPokemon.forEach((pokemon) => {
+  filteredPokemon.forEach((pokemon) => {
     const card = cardHTML(pokemon);
     container.innerHTML += card;
   });
