@@ -3,7 +3,6 @@ import "./styles/style.scss";
 
 const container = document.querySelector<HTMLElement>(".card-container");
 const search = document.querySelector<HTMLInputElement>(".searchInput");
-// const searchButton = document.querySelector<HTMLButtonElement>(".searchButton");
 
 if (!container) {
   throw new Error("Issues with container selector");
@@ -11,9 +10,6 @@ if (!container) {
 if (!search) {
   throw new Error("Issues with search selector");
 }
-// if (!searchButton) {
-//   throw new Error("Issues with searchButton selector");
-// }
 
 const cardHTML = (pokemon: Pokemon) => {
   const JoinPokemonTypes = pokemon.types.join(` & `);
@@ -25,7 +21,6 @@ const cardHTML = (pokemon: Pokemon) => {
     </div>`;
 };
 
-// for each pokemon in pokemon array change html
 pokemonArray.forEach((pokemon) => {
   const card = cardHTML(pokemon);
   container.innerHTML += card;
@@ -40,22 +35,13 @@ const filterPokemonArrayByName = (searchTerm: string) => {
   changeHTMLByName(filteredPokemon);
 };
 
-const changeHTMLByName = (filteredPokemon: Pokemon[]) => {
+const changeHTMLByName = (ilteredPokemon: Pokemon[]) => {
   container.innerHTML = ``;
-  filteredPokemon.forEach((pokemon) => {
+  ilteredPokemon.forEach((pokemon) => {
     const card = cardHTML(pokemon);
     container.innerHTML += card;
   });
 };
-
-// const testButton = () => {
-//   console.log("working");
-// };
-
-//event listener
-// searchButton.addEventListener("click", (event: Event) =>
-//   filterPokemonArrayByName(search.value)
-// );
 
 search.addEventListener("input", (event: Event) =>
   filterPokemonArrayByName(search.value)
