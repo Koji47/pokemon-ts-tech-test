@@ -43,6 +43,4 @@ const changeHTMLByName = (ilteredPokemon: Pokemon[]) => {
   });
 };
 
-search.addEventListener("input", (event: Event) =>
-  filterPokemonArrayByName(search.value)
-);
+search.addEventListener("input", () => filterPokemonArrayByName(search.value));
