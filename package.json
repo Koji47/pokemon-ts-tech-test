@@ -1,4 +1,6 @@
 {
+  "homepage": "https://Koji47.github.io/pokemon-ts-tech-test",
+  "author": "Chu Lam",
   "name": "pokedom-ts",
   "private": true,
   "version": "0.0.0",
@@ -6,11 +8,13 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
+    "gh-pages": "^5.0.0",
+    "sass": "^1.64.2",
     "typescript": "^5.0.2",
-    "vite": "^4.4.5",
-    "sass": "^1.64.2"
+    "vite": "^4.4.5"
   }
 }
